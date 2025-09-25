@@ -25,7 +25,7 @@ Frontend en **Vue 3 + PrimeVue (tema Lara)** y backend **.NET 8 + SQLite** (con 
 2. **Frontend**
 
    ```bash
-   cd ../frontend
+   cd frontend
    npm install
    npm run dev
    ```
