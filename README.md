@@ -115,17 +115,8 @@ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer"));
 ```
 
-3. En `backend/appsettings.json`, agregar la connection string:
 
-```json
-{
-  "ConnectionStrings": {
-    "SqlServer": "Server=localhost,1433;Database=UsuariosDb;User Id=sa;Password=TuPass!;TrustServerCertificate=True"
-  }
-}
-```
-
-4. Reiniciar el backend. (Para producción, migraciones EF es lo recomendado.)
+3. Reiniciar el backend. (Para producción, migraciones EF es lo recomendado.)
 
 ---
 
@@ -143,16 +134,6 @@ npm run build   # build de producción
 npm run preview # server de vista previa del build
 ```
 
----
-
-## Problemas comunes (FAQ)
-
-* **`Network Error` en frontend**: asegurate de haber corrido `dotnet run` (API en 5099).
-* **CORS** en producción: el backend viene con CORS abierto en dev. Para producción, restringí orígenes en `Program.cs`.
-* **`409 Correo ya existente`**: probaste crear dos usuarios con el mismo email (regla de negocio).
-* **`npm audit`**: son advertencias de dev. Podés ejecutar `npm audit fix` si querés limpiar.
-
----
 
 ## Estructura
 
